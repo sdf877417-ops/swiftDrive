@@ -12,6 +12,7 @@
     "declaration": false,
     "sourceMap": true,
     "noImplicitOverride": true,
+    "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "types": ["node"]
   },
