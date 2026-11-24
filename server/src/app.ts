@@ -1,10 +1,10 @@
 
 import express from "express";
 import cors from "cors";
-import helmet from "helmet";
+// import helmet from "helmet";
+import * as helmet from "helmet";
 import cookieParser from "cookie-parser";
 import { rateLimit } from "express-rate-limit";
-
 import { env } from "./config/env.js";
 import authRoutes from "./routes/auth.js";
 import fileRoutes from "./routes/files.js";
@@ -22,7 +22,8 @@ const allowedOrigins = [
 ].filter((origin): origin is string => Boolean(origin));
 
 // Security headers
-app.use(helmet());
+// app.use(helmet());
+app.use(helmet.default());
 
 // CORS configuration
 app.use(
