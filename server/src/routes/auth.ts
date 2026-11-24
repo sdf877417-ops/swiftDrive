@@ -62,6 +62,9 @@ router.post("/register", authLimiter, async (req, res, next) => {
     next(error);
   }
 });
+
+// const response = await api.post("/auth/login",
+
 router.post("/login", authLimiter, async (req, res, next) => {
   try {
     const parsed = loginSchema.safeParse(req.body);
