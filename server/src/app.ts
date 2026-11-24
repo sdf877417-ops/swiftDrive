@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import helmet from "helmet";
+// import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import { rateLimit } from "express-rate-limit";
 import { env } from "./config/env.js";
@@ -20,7 +20,7 @@ const allowedOrigins = [
 ].filter((origin): origin is string => Boolean(origin));
 
 // Security headers
-app.use(helmet());
+// app.use(helmet());
 // CORS configuration
 app.use(
   cors({
